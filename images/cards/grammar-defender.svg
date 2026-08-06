@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500">
+<defs><linearGradient id="g"><stop stop-color="#ff805f"/><stop offset="1" stop-color="#ff3e78"/></linearGradient></defs>
+<rect width="760" height="500" rx="34" fill="url(#g)"/><circle cx="650" cy="80" r="55" fill="#ffe56d"/>
+<path d="M110 392h550V195L385 78 110 195z" fill="#f5f7ff"/>
+        <rect x="160" y="220" width="450" height="172" rx="14" fill="#dfe8ff"/><rect x="340" y="270" width="90" height="122" fill="#7052d3"/>
+        <circle cx="155" cy="118" r="32" fill="#ff5d78"/><circle cx="625" cy="122" r="30" fill="#ff5d78"/>
+<rect y="412" width="760" height="88" fill="#08245c" opacity=".97"/>
+<text x="380" y="452" text-anchor="middle" font-family="Arial Black" font-size="34" fill="#fff">GRAMMAR DEFENDER</text>
+<text x="380" y="480" text-anchor="middle" font-family="Arial" font-size="20" fill="#9deaff">ACADEMY UNDER ATTACK</text>
+</svg>

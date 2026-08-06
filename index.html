@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TypeGame — English Adventure City</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="intro" id="intro" aria-hidden="true">
+    <img src="images/logo/logo.svg" alt="TypeGame">
+    <p>English Adventure City</p>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <img src="images/logo/logo.svg" alt="TypeGame">
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#games" data-i18n="navGames">Games</a>
+      <a href="#about" data-i18n="navAbout">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="soundToggle" class="sound-toggle" type="button">SOUND ON</button>
+      <div class="language">
+        <button id="languageButton" class="language-current" type="button" aria-expanded="false">
+          <img src="images/icons/globe.svg" alt="">
+          <span id="languageLabel">English</span>
+        </button>
+        <div id="languageMenu" class="language-menu">
+          <button type="button" data-lang="en">English</button>
+          <button type="button" data-lang="ru">Русский</button>
+          <button type="button" data-lang="be">Беларуская</button>
+          <button type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="ar">العربية</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <img class="hero-art" src="images/hero/hero-city-wow.jpg" alt="English Adventure City">
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="heroEyebrow">THE CASE OF THE LOST BOOK</p>
+        <h1 data-i18n="heroTitle">Welcome to English Adventure City</h1>
+        <p class="hero-text" data-i18n="heroText">
+          Complete three missions, solve the mystery and return the Book of Knowledge to the city.
+        </p>
+        <a class="primary-button" href="#games" data-i18n="startAdventure">Start adventure</a>
+      </div>
+      <div class="book-glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="mission-section" id="games">
+      <div class="section-heading">
+        <p data-i18n="missionLabel">THREE CHAPTERS — ONE STORY</p>
+        <h2 data-i18n="chooseMission">Choose your mission</h2>
+      </div>
+
+      <div class="mission-grid">
+        <article class="mission-card green">
+          <div class="mission-image">
+            <img src="images/cards/word-sprint-wow.jpg" alt="The Missing Dictionary">
+            <span class="mission-number">MISSION 01</span>
+          </div>
+          <div class="mission-content">
+            <h3>Word Sprint</h3>
+            <p data-i18n="wordText">Restore the missing dictionary pages by typing vocabulary words and collecting clues.</p>
+            <div class="level-row"><span>Junior</span><span>Explorer</span><span>Expert</span></div>
+            <div class="mission-actions">
+              <a class="play-button" href="games/word-sprint.html" data-i18n="play">Play</a>
+              <button class="rules-button" type="button" data-game="word" data-i18n="howToPlay">How to play</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mission-card purple">
+          <div class="mission-image">
+            <img src="images/cards/grammar-defender-wow.jpg" alt="Grammar Defender">
+            <span class="mission-number">MISSION 02</span>
+          </div>
+          <div class="mission-content">
+            <h3>Grammar Defender</h3>
+            <p data-i18n="grammarText">Defend Grammar Academy from incorrect sentences and survive four attack waves.</p>
+            <div class="level-row"><span>Junior</span><span>Explorer</span><span>Expert</span></div>
+            <div class="mission-actions">
+              <a class="play-button" href="games/grammar-defender.html" data-i18n="play">Play</a>
+              <button class="rules-button" type="button" data-game="grammar" data-i18n="howToPlay">How to play</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mission-card blue">
+          <div class="mission-image">
+            <img src="images/cards/sentence-detective-wow.jpg" alt="Sentence Detective">
+            <span class="mission-number">MISSION 03</span>
+          </div>
+          <div class="mission-content">
+            <h3>Sentence Detective</h3>
+            <p data-i18n="sentenceText">Investigate five locations, decode messages and reveal who hid the Book of Knowledge.</p>
+            <div class="level-row"><span>Junior</span><span>Explorer</span><span>Expert</span></div>
+            <div class="mission-actions">
+              <a class="play-button" href="games/sentence-detective.html" data-i18n="play">Play</a>
+              <button class="rules-button" type="button" data-game="sentence" data-i18n="howToPlay">How to play</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="feature-strip">
+        <div><strong>3</strong><span data-i18n="featureMissions">Exciting missions</span></div>
+        <div><strong>3</strong><span data-i18n="featureCrystals">Knowledge crystals</span></div>
+        <div><strong>5</strong><span data-i18n="featureLanguages">Interface languages</span></div>
+        <div><strong>1</strong><span data-i18n="featureStory">Connected story</span></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-text">
+        <p class="eyebrow" data-i18n="aboutLabel">ABOUT THE PROJECT</p>
+        <h2 data-i18n="aboutTitle">English practice through investigation and adventure</h2>
+        <p data-i18n="aboutText">Each mission has three difficulty levels, sound effects, scores, clues and a complete story ending.</p>
+      </div>
+      <img src="images/characters/hero-team.jpg" alt="TypeGame characters">
+    </section>
+  </main>
+
+  <footer>
+    <img src="images/logo/logo.svg" alt="TypeGame">
+    <p>TypeGame — English Adventure City</p>
+  </footer>
+
+  <div class="modal" id="rulesModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <p class="eyebrow" data-i18n="briefing">MISSION BRIEFING</p>
+      <h2 id="modalTitle">How to play</h2>
+      <div id="modalText"></div>
+      <a class="primary-button" id="modalPlay" href="#" data-i18n="startMission">Start mission</a>
+    </div>
+  </div>
+
+  <audio id="clickSound" src="sounds/click.wav"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
