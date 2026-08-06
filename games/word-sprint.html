@@ -1,9 +1,20 @@
 <!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Word Sprint</title><link rel="stylesheet" href="game.css"></head>
 <body><header class="top"><a href="../index.html">← На витрину</a><img class="logo" src="../images/logo/logo.svg" alt="TypeGame"><span>Глава 1</span></header>
 <main class="wrap">
-<section class="panel" id="start"><h1>Word Sprint: The Missing Dictionary</h1><p class="lead">Из библиотеки исчезли страницы словаря. Печатайте слова, собирайте улики и откройте сейф.</p><h2>Сложность</h2>
+<section class="game-hero game-hero-word">
+  <div class="game-hero-content">
+    <h1>Word Sprint: The Missing Dictionary</h1>
+    <p class="lead">Story mission with illustrations, clues, levels and sound effects.</p>
+  </div>
+</section>
+<section class="panel" id="start"><p class="lead">Из библиотеки исчезли страницы словаря. Печатайте слова, собирайте улики и откройте сейф.</p><img class="story-image" src="../images/cards/word-sprint-wow.jpg" alt="Word Sprint: The Missing Dictionary"><div class="story-gallery"><figure><img src="../images/games/word-sprint/library.jpg" alt="Vocabulary Library"><figcaption>Vocabulary Library</figcaption></figure><figure><img src="../images/games/word-sprint/professor-owl.jpg" alt="Professor Owl"><figcaption>Professor Owl</figcaption></figure><figure><img src="../images/games/word-sprint/dictionary.jpg" alt="Missing Dictionary"><figcaption>The Missing Dictionary</figcaption></figure></div><h2>Сложность</h2>
 <div class="choices"><button class="choice active" data-mode="junior">Junior</button><button class="choice" data-mode="explorer">Explorer</button><button class="choice" data-mode="expert">Expert</button></div><br><button class="btn" id="startBtn">Начать миссию</button></section>
-<section class="panel hidden" id="game"><div class="hud"><span>Миссия: <b id="level">1</b>/4</span><span>Очки: <b id="score">0</b></span><span>Жизни: <b id="lives">3</b></span><span>Серия: <b id="streak">0</b></span></div>
+<section class="panel hidden" id="game"><div class="mission-scene word-scene">
+      <div class="mission-scene-text">
+        <h2>Search the Vocabulary Library</h2>
+        <p>Type the English words correctly, recover the lost pages and collect every clue.</p>
+      </div>
+    </div><div class="hud"><span>Миссия: <b id="level">1</b>/4</span><span>Очки: <b id="score">0</b></span><span>Жизни: <b id="lives">3</b></span><span>Серия: <b id="streak">0</b></span></div>
 <div class="mission"><h2 id="missionTitle">Library Search</h2><p>Напечатайте слово</p><div class="task" id="taskWord">cat</div></div>
 <input class="input" id="answer" type="text" autocomplete="off" placeholder="Введите слово и нажмите Enter"><div class="feedback" id="feedback"></div><h3>Журнал улик</h3><div class="evidence" id="evidence"></div></section>
 <section class="panel result hidden" id="result"><h2 id="resultTitle"></h2><p class="lead" id="resultText"></p><button class="btn" id="againBtn">Сыграть снова</button> <a class="btn" href="../index.html">На витрину</a></section></main>

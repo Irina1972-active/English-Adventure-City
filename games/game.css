@@ -1,1 +1,127 @@
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#8fdcff,#edfaff);color:#0a285f;min-height:100vh}.top{display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;background:#08265f;color:#fff}.top a{color:#fff;text-decoration:none;font-weight:900}.logo{width:190px}.wrap{max-width:1100px;margin:28px auto;padding:0 18px}.panel{background:#fff;border-radius:28px;padding:28px;box-shadow:0 18px 40px rgba(7,39,94,.18);margin-bottom:22px}.hidden{display:none!important}h1{font-size:clamp(34px,5vw,58px);margin:0 0 12px}.lead{font-size:19px;line-height:1.5;color:#456080}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}.choice,.btn{border:0;border-radius:18px;padding:16px;font-weight:900;font-size:17px;cursor:pointer}.choice{background:#eaf5ff;color:#0a285f;border:3px solid #b6ddff}.choice.active{background:#176fd5;color:#fff}.btn{display:inline-block;background:linear-gradient(#ffd94e,#ff9f0a);color:#08265f;box-shadow:0 8px 0 #d97900;text-decoration:none}.hud{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}.hud span{background:#eaf5ff;border-radius:999px;padding:10px 14px;font-weight:900}.mission{background:linear-gradient(135deg,#154da0,#0a2b70);color:#fff;border-radius:25px;padding:24px;text-align:center}.mission h2{font-size:32px;margin:0 0 8px}.task{font-size:46px;font-weight:900;margin:25px 0}.input{width:100%;padding:16px;border:3px solid #a7d8ff;border-radius:16px;font-size:22px}.feedback{min-height:30px;margin:12px 0;font-weight:900}.correct{color:#0b9d48}.wrong{color:#d32938}.evidence{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.clue{padding:12px;border-radius:14px;background:#eef4fb;text-align:center;font-weight:900}.clue.found{background:#dff8df;color:#167434}.targets{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.target{padding:22px;border-radius:18px;border:3px solid #b7d9ff;background:#eef7ff;font-size:20px;font-weight:900;cursor:pointer}.sentence-pool,.sentence-line{display:flex;gap:10px;flex-wrap:wrap;min-height:70px;padding:15px;border-radius:18px;background:#edf7ff;margin:14px 0}.word{padding:12px 16px;border:0;border-radius:14px;background:#176fd5;color:#fff;font-weight:900;cursor:pointer}.result{text-align:center}.result h2{font-size:44px}@media(max-width:720px){.choices,.targets{grid-template-columns:1fr}.evidence{grid-template-columns:repeat(2,1fr)}}
+
+/* VISUAL STORY UPGRADE */
+.game-hero{
+  position:relative;
+  min-height:330px;
+  margin-bottom:24px;
+  overflow:hidden;
+  border-radius:28px;
+  background-position:center;
+  background-size:cover;
+  box-shadow:0 18px 40px rgba(7,39,94,.28);
+}
+.game-hero::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(4,24,67,.90),rgba(4,24,67,.42),rgba(4,24,67,.08));
+}
+.game-hero-content{
+  position:relative;z-index:2;
+  max-width:620px;padding:42px;color:#fff;
+}
+.game-hero-content h1{
+  color:#fff;
+  text-shadow:0 4px 0 #061d57,0 12px 28px rgba(0,0,0,.35);
+}
+.game-hero-content .lead{color:#fff;font-weight:700}
+.game-hero-word{background-image:url("../images/cards/word-sprint-wow.jpg")}
+.game-hero-grammar{background-image:url("../images/cards/grammar-defender-wow.jpg")}
+.game-hero-sentence{background-image:url("../images/cards/sentence-detective-wow.jpg")}
+.story-image{
+  width:100%;
+  max-height:300px;
+  object-fit:cover;
+  border-radius:22px;
+  margin:18px 0;
+  box-shadow:0 12px 28px rgba(7,39,94,.22);
+}
+.scene-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:20px 0;
+}
+.scene-card{
+  background:#eef7ff;
+  border-radius:20px;
+  padding:18px;
+  border:3px solid #cfe9ff;
+}
+.scene-card img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  border-radius:16px;
+}
+@media(max-width:720px){
+  .game-hero-content{padding:28px 22px}
+  .scene-grid{grid-template-columns:1fr}
+}
+
+
+/* FULL ILLUSTRATED GAME SCENES */
+.story-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin:20px 0 26px;
+}
+.story-gallery figure{
+  margin:0;
+  overflow:hidden;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 12px 28px rgba(7,39,94,.20);
+  border:3px solid #d9efff;
+}
+.story-gallery img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  display:block;
+}
+.story-gallery figcaption{
+  padding:10px 12px;
+  font-weight:900;
+  color:#17396f;
+  text-align:center;
+}
+.mission-scene{
+  position:relative;
+  overflow:hidden;
+  margin:18px 0;
+  border-radius:24px;
+  min-height:230px;
+  background-position:center;
+  background-size:cover;
+  box-shadow:0 14px 32px rgba(7,39,94,.22);
+}
+.mission-scene::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(5,25,68,.82),rgba(5,25,68,.18));
+}
+.mission-scene-text{
+  position:relative;
+  z-index:2;
+  max-width:560px;
+  padding:28px;
+  color:#fff;
+}
+.mission-scene-text h2{
+  margin:0 0 8px;
+  color:#fff;
+  font-size:30px;
+}
+.mission-scene-text p{
+  margin:0;
+  line-height:1.5;
+  font-weight:700;
+}
+.word-scene{background-image:url("../images/games/word-sprint/library.jpg")}
+.grammar-scene{background-image:url("../images/games/grammar-defender/academy.jpg")}
+.sentence-scene{background-image:url("../images/games/sentence-detective/agency.jpg")}
+@media(max-width:760px){
+  .story-gallery{grid-template-columns:1fr}
+}

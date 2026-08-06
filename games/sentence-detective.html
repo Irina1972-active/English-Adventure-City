@@ -1,7 +1,18 @@
 <!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sentence Detective</title><link rel="stylesheet" href="game.css"></head>
 <body><header class="top"><a href="../index.html">← На витрину</a><img class="logo" src="../images/logo/logo.svg" alt="TypeGame"><span>Глава 3</span></header><main class="wrap">
-<section class="panel" id="start"><h1>Sentence Detective: The Lost Message</h1><p class="lead">Восстановите сообщения, сравните улики и раскройте тайну Книги знаний.</p><div class="choices"><button class="choice active" data-mode="junior">Junior</button><button class="choice" data-mode="explorer">Explorer</button><button class="choice" data-mode="expert">Expert</button></div><br><button class="btn" id="startBtn">Начать расследование</button></section>
-<section class="panel hidden" id="game"><div class="hud"><span>Сцена: <b id="scene">1</b>/5</span><span>Очки: <b id="score">0</b></span><span>Подсказки: <b id="hints">3</b></span></div><div class="mission"><h2 id="caseTitle">Crime Scene</h2><p>Нажимайте на слова в правильном порядке.</p></div><h3>Собранное предложение</h3><div class="sentence-line" id="line"></div><h3>Найденные слова</h3><div class="sentence-pool" id="pool"></div><button class="btn" id="checkBtn">Проверить</button> <button class="btn" id="resetBtn">Сбросить</button><div class="feedback" id="feedback"></div></section>
+<section class="game-hero game-hero-sentence">
+  <div class="game-hero-content">
+    <h1>Sentence Detective: The Lost Message</h1>
+    <p class="lead">Story mission with illustrations, clues, levels and sound effects.</p>
+  </div>
+</section>
+<section class="panel" id="start"><p class="lead">Восстановите сообщения, сравните улики и раскройте тайну Книги знаний.</p><img class="story-image" src="../images/cards/sentence-detective-wow.jpg" alt="Sentence Detective: The Lost Message"><div class="story-gallery"><figure><img src="../images/games/sentence-detective/agency.jpg" alt="Detective Agency"><figcaption>Detective Agency</figcaption></figure><figure><img src="../images/games/sentence-detective/evidence-room.jpg" alt="Evidence room"><figcaption>Evidence Room</figcaption></figure><figure><img src="../images/games/sentence-detective/detective-team.jpg" alt="Detective team"><figcaption>Investigation Team</figcaption></figure></div><div class="choices"><button class="choice active" data-mode="junior">Junior</button><button class="choice" data-mode="explorer">Explorer</button><button class="choice" data-mode="expert">Expert</button></div><br><button class="btn" id="startBtn">Начать расследование</button></section>
+<section class="panel hidden" id="game"><div class="mission-scene sentence-scene">
+      <div class="mission-scene-text">
+        <h2>Investigate the Lost Message</h2>
+        <p>Restore secret sentences, compare evidence and reveal who hid the Book of Knowledge.</p>
+      </div>
+    </div><div class="hud"><span>Сцена: <b id="scene">1</b>/5</span><span>Очки: <b id="score">0</b></span><span>Подсказки: <b id="hints">3</b></span></div><div class="mission"><h2 id="caseTitle">Crime Scene</h2><p>Нажимайте на слова в правильном порядке.</p></div><h3>Собранное предложение</h3><div class="sentence-line" id="line"></div><h3>Найденные слова</h3><div class="sentence-pool" id="pool"></div><button class="btn" id="checkBtn">Проверить</button> <button class="btn" id="resetBtn">Сбросить</button><div class="feedback" id="feedback"></div></section>
 <section class="panel result hidden" id="result"><h2 id="resultTitle"></h2><p class="lead" id="resultText"></p><button class="btn" onclick="location.reload()">Сыграть снова</button> <a class="btn" href="../index.html">На витрину</a></section></main>
 <audio id="correctSound" src="../sounds/correct.wav"></audio><audio id="wrongSound" src="../sounds/wrong.wav"></audio><audio id="victorySound" src="../sounds/victory.wav"></audio>
 <script>

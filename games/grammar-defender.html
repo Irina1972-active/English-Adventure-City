@@ -1,7 +1,18 @@
 <!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grammar Defender</title><link rel="stylesheet" href="game.css"></head>
 <body><header class="top"><a href="../index.html">← На витрину</a><img class="logo" src="../images/logo/logo.svg" alt="TypeGame"><span>Глава 2</span></header><main class="wrap">
-<section class="panel" id="start"><h1>Grammar Defender: Academy Under Attack</h1><p class="lead">Грамматические дроны атаковали академию. Выбирайте правильные предложения и защищайте город.</p><div class="choices"><button class="choice active" data-mode="junior">Junior</button><button class="choice" data-mode="explorer">Explorer</button><button class="choice" data-mode="expert">Expert</button></div><br><button class="btn" id="startBtn">Начать защиту</button></section>
-<section class="panel hidden" id="game"><div class="hud"><span>Волна: <b id="wave">1</b>/4</span><span>Очки: <b id="score">0</b></span><span>Защита: <b id="shield">100</b>%</span></div><div class="mission"><h2>Choose the correct sentence</h2></div><div class="targets" id="targets"></div><div class="feedback" id="feedback"></div></section>
+<section class="game-hero game-hero-grammar">
+  <div class="game-hero-content">
+    <h1>Grammar Defender: Academy Under Attack</h1>
+    <p class="lead">Story mission with illustrations, clues, levels and sound effects.</p>
+  </div>
+</section>
+<section class="panel" id="start"><p class="lead">Грамматические дроны атаковали академию. Выбирайте правильные предложения и защищайте город.</p><img class="story-image" src="../images/cards/grammar-defender-wow.jpg" alt="Grammar Defender: Academy Under Attack"><div class="story-gallery"><figure><img src="../images/games/grammar-defender/academy.jpg" alt="Grammar Academy"><figcaption>Grammar Academy</figcaption></figure><figure><img src="../images/games/grammar-defender/drones.jpg" alt="Grammar drones"><figcaption>Attack Drones</figcaption></figure><figure><img src="../images/games/grammar-defender/captain-fox.jpg" alt="Captain Fox"><figcaption>Captain Fox</figcaption></figure></div><div class="choices"><button class="choice active" data-mode="junior">Junior</button><button class="choice" data-mode="explorer">Explorer</button><button class="choice" data-mode="expert">Expert</button></div><br><button class="btn" id="startBtn">Начать защиту</button></section>
+<section class="panel hidden" id="game"><div class="mission-scene grammar-scene">
+      <div class="mission-scene-text">
+        <h2>Defend Grammar Academy</h2>
+        <p>Choose the correct sentence before the drones break through the protective shield.</p>
+      </div>
+    </div><div class="hud"><span>Волна: <b id="wave">1</b>/4</span><span>Очки: <b id="score">0</b></span><span>Защита: <b id="shield">100</b>%</span></div><div class="mission"><h2>Choose the correct sentence</h2></div><div class="targets" id="targets"></div><div class="feedback" id="feedback"></div></section>
 <section class="panel result hidden" id="result"><h2 id="resultTitle"></h2><p class="lead" id="resultText"></p><button class="btn" onclick="location.reload()">Сыграть снова</button> <a class="btn" href="../index.html">На витрину</a></section></main>
 <audio id="correctSound" src="../sounds/correct.wav"></audio><audio id="wrongSound" src="../sounds/wrong.wav"></audio><audio id="victorySound" src="../sounds/victory.wav"></audio>
 <script>
